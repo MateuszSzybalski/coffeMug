@@ -37,7 +37,6 @@ describe('template spec', () => {
     catalogSearch.selectFilter('Gear')
     catalogSearch.selectProduct('Bolo Sport')
     catalogSearch.catchRequest('GET', '/pub/static/version1695896754/frontend/Magento/luma/en_US/Magento_Ui/templates/collection.html', 'request')
-    //cy.intercept('GET', '/pub/static/version1695896754/frontend/Magento/luma/en_US/Magento_Ui/templates/collection.html').as("sth")
     catalogSearch.clickButton(catalogSearch.buttonAddToCart)
     catalogSearch.waitForServiceResponse('request')
     catalogSearch.checkIfElementConatinsCorrectNumber(catalogSearch.basketcounterNumber, 1)
